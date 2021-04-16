@@ -5,6 +5,7 @@
     left:0;
     right:0;
     height:100px;
+    z-index: -1;
     }
 
 .title{
@@ -16,4 +17,9 @@ h1{
     font-family: Helvetica, Arial, sans-serif;
     font-size: 42px;
     font-weight: 200;
+    margin-left: 350px !important;
+}
+
+.hero{
+     z-index: 9999;
 }
