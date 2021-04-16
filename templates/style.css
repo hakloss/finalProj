@@ -1,0 +1,19 @@
+.bar {
+    background-color: black;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:100px;
+    }
+
+.title{
+    color:white;
+    padding-left:20px;
+}
+
+h1{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 42px;
+    font-weight: 200;
+}
