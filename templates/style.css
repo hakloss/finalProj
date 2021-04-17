@@ -11,6 +11,13 @@ h1{
     margin-left: 350px !important;
 }
 
+a:link{
+    color:white;
+}
+a:visited{
+    color:lightgray;
+}
+
 label{
     font-family: Helvetica, Arial, sans-serif;
     font-size: 18px;
@@ -19,7 +26,7 @@ label{
 
 .bar {
     background-color: black;
-    position:fixed;
+    position: absolute;
     top:0;
     left:0;
     right:0;
@@ -27,13 +34,16 @@ label{
     z-index: -1;
     }
 
+.homelink {
+    margin: -180px 0 130px 370px;
+}
 .title{
     color:white;
     padding-left:20px;
 }
 
 .hero{
-     z-index: 9999;
+     z-index: 99;
 }
 
 .centerlogin{
@@ -41,7 +51,12 @@ label{
     width: 30%;
 }
 
-input[type=text]{
+.accountform{
+    margin: auto;
+    width: 80%;
+}
+
+input[type=text], select{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -51,7 +66,7 @@ input[type=text]{
     box-sizing: border-box;
 }
 
-input[type=submit] {
+input[type=submit]{
     display: block;
     width: 50%;
     margin:auto;
@@ -77,4 +92,15 @@ input[type=submit] {
     padding: 14px 20px;
     border: none;
     border-radius: 4px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
