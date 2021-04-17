@@ -11,5 +11,14 @@
     <h1 class="title">TA Scheduling</h1>
 </div>
 
+<form action="/" method="post" class="centerlogin">
+    {% csrf_token %}
+    <label for="user">Username:</label><br/>
+    <input type="text" id="user" name="user"><br/><br/>
+    <label for="pass">Password:</label><br/>
+    <input type="text" id="pass" name="pass" ><br/><br/>
+    <input type="submit" value="Login">
+</form>
+
 </body>
 </html>

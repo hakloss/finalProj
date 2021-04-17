@@ -1,3 +1,22 @@
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color:#505050;
+}
+
+h1{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 42px;
+    font-weight: 200;
+    margin-left: 350px !important;
+}
+
+label{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color:#626262;
+}
+
 .bar {
     background-color: black;
     position:fixed;
@@ -13,13 +32,34 @@
     padding-left:20px;
 }
 
-h1{
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 42px;
-    font-weight: 200;
-    margin-left: 350px !important;
-}
-
 .hero{
      z-index: 9999;
+}
+
+.centerlogin{
+    margin: auto;
+    width: 30%;
+}
+
+input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    display: block;
+    width: 50%;
+    margin:auto;
+    background-color: #ffbd00;
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
 }
