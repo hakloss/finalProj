@@ -104,7 +104,6 @@ input[type=submit]{
     width: 50%;
 }
 .row:after {
-
   display: table;
   clear: both;
 }
