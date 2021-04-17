@@ -1,4 +1,4 @@
-class Instructor(Account):
+class instructor(account):
     """instructor child class from Account ABC"""
 
     def __init__(self):
