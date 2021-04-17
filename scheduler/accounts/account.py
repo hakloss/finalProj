@@ -1,6 +1,6 @@
 from abc import ABC
 
-class accounts(ABC):
+class account(ABC):
 
 
     def __init__(self):
