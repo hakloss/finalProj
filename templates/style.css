@@ -35,7 +35,7 @@ label{
     }
 
 .homelink {
-    margin: -180px 0 130px 370px;
+    margin: -135px 0 130px 370px;
 }
 .title{
     color:white;
@@ -44,6 +44,7 @@ label{
 
 .hero{
      z-index: 99;
+    margin-left:20px;
 }
 
 .centerlogin{
@@ -94,13 +95,16 @@ input[type=submit]{
     border-radius: 4px;
 }
 
-.column {
-  float: left;
-  width: 50%;
+.columnleft {
+    float: left;
+    width: 45%;
 }
-
+.columnright {
+    float: right;
+    width: 50%;
+}
 .row:after {
-  content: "";
+
   display: table;
   clear: both;
 }

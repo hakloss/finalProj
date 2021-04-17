@@ -6,7 +6,7 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<img class="hero" src="img/calendar.png" width="275px">
+<img class="hero" src="img/calendar2.png" width="300px">
 <div class="bar">
     <h1 class="title">TA Scheduling</h1>
 
@@ -17,7 +17,7 @@
 <div class="row">
     <form action="/" method="post" class="accountform">
         {% csrf_token %}
-  <div class="column"><label for="fname">First name:</label><br/>
+  <div class="columnleft"><label for="fname">First name:</label><br/>
     <input type="text" id="fname" name="fname"><br/><br/>
 
     <label for="lname">Last name:</label><br/>
@@ -35,7 +35,7 @@
         <option value="instructor">Instructor</option>
         <option value="ta">TA</option>
     </select></div>
-  <div class="column"><label for="address">Address:</label><br/>
+  <div class="columnright"><label for="address">Address:</label><br/>
     <input type="text" id="address" name="address" ><br/><br/>
 
     <label for="city">City:</label><br/>
