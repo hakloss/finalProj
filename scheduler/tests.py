@@ -1,6 +1,24 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
-from django.test import TestCase
+from django.test import TestCase, Client
 
 # Create your tests here.
+class Login(TestCase):
+    def setUp(self):
+        self.client = Client()
+
+    def test_validLogin(self):
+        pass
+
+    def test_invalidLogin(self):
+        pass
+
+class CreateAccount(TestCase):
+    def setUp(self):
+        self.client = Client()
+
+    def accountcreated(self):
+        pass
+
+    def noneforemptyfields(self):
+        pass
+
+
