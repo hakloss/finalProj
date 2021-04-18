@@ -21,4 +21,16 @@ class CreateAccount(TestCase):
     def noneforemptyfields(self):
         pass
 
+    def duplicateuser(self):
+        pass
+
+class CreateCourse(TestCase):
+    def setUp(self):
+        self.client = Client()
+
+    def coursecreated(self):
+        pass
+
+    def duplicatecourse(self):
+        pass
 
