@@ -2,48 +2,46 @@ from abc import ABC
 
 class account(ABC):
 
-
-    def __init__(self):
-        self.name = None
-        self.email = None
-        self.address = None
-        self.streetName = None
-        self.zip = None
-        self.state = None
-        self.phoneNumber = None
-
+    @abstractmethod
     def setName(self, name):
-        self.name = name
+        pass
 
+    @abstractmethod
     def getName(self):
-        return self.name()
+        pass
 
+    @abstractmethod
     def setEmail(self, email):
-        self.email = email
+        pass
 
+    @abstractmethod
     def getEmail(self):
-        return self.email()
+        pass
 
+    @abstractmethod
     def setAddress(self, address, streetName, zip, state):
-        self.address = address
-        self.streetName = streetName
-        self.zip = zip
-        self.state = state
+        pass
 
+    @abstractmethod
     def getAddress(self):
-        return self.address
+        pass
 
+    @abstractmethod
     def getStreetName(self):
-        return self.streetName
+        pass
 
+    @abstractmethod
     def getZip(self):
-        return self.zip
+        pass
 
+    @abstractmethod
     def getState(self):
-        return self.state
+        pass
 
+    @abstractmethod
     def setPhone(self, phoneNumber):
-        self.phoneNumber = phoneNumber
+        pass
 
+    @abstractmethod
     def getPhone(self):
-        return self.phoneNumber
+        pass
