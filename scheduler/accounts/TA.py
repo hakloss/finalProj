@@ -1,8 +1,6 @@
-from django.contrib import admin
-#from .models import .account
 import account
 
-class administrator(account):
+class TA(account):
 
     def __init__(self):
         self.name = None
