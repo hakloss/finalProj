@@ -3,6 +3,7 @@ import unittest
 from courses import*
 
 
+
 class TestCourseinit(unittest.TestCase):
     def setUp(self):
         self.temp = course("Software Engineering")
