@@ -32,17 +32,40 @@ class Login(View):
 
 class Home(View):
     def get(self, request):
-        pass
+        m = request.session["name"]
+        #if m doesn't have a name
+        #This is account validation and should become a function
+        #return redirect("/login/")
 
     def post(self, request):
         pass
 
 class CreateAccount(View):
     def get(self, request):
-        pass
+
+        # if m doesn't have a name
+        # This is account validation and should become a function
+        # return redirect("/login/")
+        return render(request, "CreateAccount.html", {"fname": XXX, "lname": XXX, "email":XXX, "password":XXX,
+                                                      "role":XXX, "address":XXX, "city":XXX, "state":XXX, "zip":XXX, "pphone":XXX,
+                                                      "wphone":XXX})
+
 
     def post(self, request):
-        pass
+        xfname = request.POST.get('fname')
+        xlname = request.POST.get('lname')
+        xemail = request.POST.get('email')
+        xpass=request.POST.get('pass')
+        xrole=request.POST.get('role')
+        xaddress=request.POST.get('address')
+        xcity=request.POST.get('city')
+        xstate=request.POST.get('state')
+        xzip=request.POST.get('zip')
+        xpphone=request.POST.get('pphone')
+        xwphone=request.POST.get('wphone')
+
+        account = XXX(fname=xfname, lname=xlname,email=xemail, password=xpass, role=xrole)
+        account.save()
 
 class CreateCourse(View):
     def get(self, request):
