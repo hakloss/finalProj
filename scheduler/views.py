@@ -22,9 +22,9 @@ class Login(View):
         except:
             noSuchUser = True
         if noSuchUser:
-            return render(request,"home.html",{"message":"User does not exist"})
+            return render(request,"home.html",{"invalidmsg":"User does not exist"})
         elif badPassword:
-            return render(request,"home.html",{"message":"Please enter valid password"})
+            return render(request,"home.html",{"invalidmsg":"Please enter valid password"})
         else:
             request.session["name"] = m.name
             return redirect("/home/")
@@ -55,7 +55,7 @@ class CreateAccount(View):
         xfname = request.POST.get('fname')
         xlname = request.POST.get('lname')
         xemail = request.POST.get('email')
-        xpass=request.POST.get('pass')
+        xpassword=request.POST.get('pass')
         xrole=request.POST.get('role')
         xaddress=request.POST.get('address')
         xcity=request.POST.get('city')
@@ -64,8 +64,11 @@ class CreateAccount(View):
         xpphone=request.POST.get('pphone')
         xwphone=request.POST.get('wphone')
 
-        account = XXX(fname=xfname, lname=xlname,email=xemail, password=xpass, role=xrole)
+        account = XXX(fname=xfname, lname=xlname,email=xemail, password=xpassword, role=xrole, address=xaddress,
+                      city=xcity, state=xstate,zip=xzip,pphone=xpphone, wphone=xwphone)
         account.save()
+
+        return render(request, "CreateAccount.html", {"successmsg": "Account has been created"})
 
 class CreateCourse(View):
     def get(self, request):
