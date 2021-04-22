@@ -1,7 +1,14 @@
 # -*- coding: utf-8 -*-
-from instructor import Instructor
+from __future__ import unicode_literals
+
+from django.test import TestCase
 import unittest
 from courses import *
+
+from django.test import TestCase
+
+# Create your tests here.
+from scheduler.accounts.instructor import Instructor
 
 
 class TestCourseinit(unittest.TestCase):
@@ -155,7 +162,7 @@ class TestName(unittest.TestCase):
         self.a.setName("John")
 
     def test_name(self):
-        self.assertEqual(self.a.getname(), "John", msg="name failed")
+        self.assertEqual(self.a.getName(), "John", msg="name failed")
 
 
 class TestEmail(unittest.TestCase):
@@ -172,37 +179,16 @@ class TestAddress(unittest.TestCase):
     # test address attribute
     def setUp(self):
         self.a = Instructor()
-        self.a.setaddress("1234")
+        self.a.setAddress("1234", "Kenwood Boulevard", "54321", "Wisconsin")
 
     def test_address(self):
-        self.assertEqual(self.a.getaddress(), "1234", msg="address failed")
-
-
-class TestStreetName(unittest.TestCase):
-    # test street name attribute
-    def setUp(self):
-        self.a = Instructor()
-        self.a.setStreetName("Kenwood Boulevard")
+        self.assertEqual(self.a.getAddress(), "1234", msg="address failed")
 
     def test_street_name(self):
         self.assertEqual(self.a.getStreetName(), "Kenwood Boulevard", msg="street name failed")
 
-
-class TestZip(unittest.TestCase):
-    # test zip code attribute
-    def setUp(self):
-        self.a = Instructor()
-        self.a.setZip("54321")
-
     def test_zip_code(self):
         self.assertEqual(self.a.getZip(), "54321", msg="zip code failed")
-
-
-class TestState(unittest.TestCase):
-    # test state attribute
-    def setUp(self):
-        self.a = Instructor()
-        self.a.setState("Wisconsin")
 
     def test_state(self):
         self.assertEqual(self.a.getState(), "Wisconsin", msg="state failed")

@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.urls import path
+from scheduler.views import Home, Login, CreateAccount, CreateCourse
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
+    path('', Home.as_view()),
+    path('login/', Login.as_view()),
+    path('createaccount/', CreateAccount.as_view()),
+    path('createcourse/', CreateCourse.as_view()),
 ]

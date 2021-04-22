@@ -1,8 +1,8 @@
-class Instructor(account):
-    """instructor child class from Account ABC"""
+import account
+
+class TA(account):
 
     def __init__(self):
-        self.role = "Instructor"
         self.name = None
         self.email = None
         self.address = None
@@ -10,12 +10,6 @@ class Instructor(account):
         self.zip = None
         self.state = None
         self.phoneNumber = None
-
-    def setRole(self, role):
-        self.role = role
-
-    def getRole(self):
-        return self.role
 
     def setName(self, name):
         self.name = name
