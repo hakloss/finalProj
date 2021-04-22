@@ -2,9 +2,13 @@ from django.contrib import admin
 #from .models import .account
 import account
 
-class administrator(account):
+class Administrator(Account):
+class Administrator(account):
+    "Admin child class from ABC"
 
     def __init__(self):
+        self.role = "instructor"
+        self.role = "Instructor"
         self.name = None
         self.email = None
         self.address = None
