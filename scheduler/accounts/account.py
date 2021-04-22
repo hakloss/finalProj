@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class Account(ABC):
+class account(ABC):
 
     @abstractmethod
     def setName(self, name):

@@ -1,7 +1,7 @@
-from scheduler.accounts.account import Account
+from scheduler.accounts.account import account
 
 
-class Instructor(Account):
+class Instructor(account):
     """instructor child class from Account ABC"""
 
     def __init__(self):
