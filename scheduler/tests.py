@@ -73,10 +73,12 @@ class LoginFail(TestCase):
     def test_noPassword(self):
         resp = self.client.post("/",{"name": "admin", "password": "instructor"}, follow = True)
         self.assertEqual(resp.context["message"],"bad password", "Failed login password, ,user: admin, password: instructor")
+        self.assertEqual(resp.status_code, 302)
 
     def test_badPassword(self):
         resp = self.client.post("/",{"name": "admin", "password": "ta"}, follow = True)
         self.assertEqual(resp.context["message"],"bad password", "Failed login password, user: admin, password: ta, ta valid for another user")
+        self.assertEqual(resp.status_code, 302)
 
 
 
