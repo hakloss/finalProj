@@ -70,6 +70,7 @@ class LoginFail(TestCase):
             for j in self.courses[i]
                 Courses(name=j, owner=temp).save()
 
+
     def test_noPassword(self):
         resp = self.client.post("/",{"name": "admin", "password": "instructor"}, follow = True)
         self.assertEqual(resp.context["message"],"bad password", "Failed login password, ,user: admin, password: instructor")
