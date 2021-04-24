@@ -2,11 +2,11 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
-    dependencies = ['0001_initial']
+    dependencies = [('scheduler', '0001_initial')]
 
     operations = [
         migrations.CreateModel(
-            name = 'User',
+            name = 'user',
             fields = [
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='User ID')),
                 ('role', models.IntegerField(verbose_name='User Role')),
