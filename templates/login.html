@@ -15,10 +15,10 @@
     {% csrf_token %}
     <label for="user">Username:</label><br/>
     <input type="text" id="user" name="user"><br/><br/>
-    <label for="pass">Password:</label><br/>
-    <input type="text" id="pass" name="pass" ><br/><br/>
+    <label for="password">Password:</label><br/>
+    <input type="text" id="password" name="password" ><br/><br/>
     <input type="submit" value="Login">
 </form>
-{{ badpasswordmsg }}
+{{ invalidmsg }}
 </body>
 </html>
