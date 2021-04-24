@@ -9,7 +9,6 @@ class LoginList(TestCase):
     client = None
     courses = None
 
-
     def setUp(self):
         self.client = Client()
         self.courses = {"CS361":["Intro to software engineering"], "CS337":["System Programming"]}
