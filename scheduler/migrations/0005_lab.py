@@ -2,7 +2,7 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
-    dependencies = [('0004_course', 'scheduler')]
+    dependencies = [('0004_section', 'scheduler')]
 
     operations = [
         migrations.CreateModel(
