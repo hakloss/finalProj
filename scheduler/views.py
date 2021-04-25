@@ -12,6 +12,7 @@ class Login(View):
         return render(request,"home.html",{"user":user.email,"password":user.password})
         #return render(request, "login.html")
 
+
     def post(self, request):
         # noSuchUser = False
         # badPassword = False
