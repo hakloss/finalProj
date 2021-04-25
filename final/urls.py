@@ -22,6 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Home.as_view()),
     path('login/', Login.as_view()),
-    path('createaccount/', CreateAccount.as_view()),
-    path('createcourse/', CreateCourse.as_view()),
+    path('CreateAccount/', CreateAccount.as_view()),
+    path('CreateCourse/', CreateCourse.as_view()),
 ]

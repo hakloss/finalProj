@@ -1,21 +1,24 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" type="text/css" href="{% static 'scheduler/style.css' %} />
 </head>
-<img class="hero" src="img/calendar2.png" width="300px">
+<body>
+<img class="hero" src="{% static 'img/calendar2.png' %}" width="300px">
 <div class="bar">
     <h1 class="title">TA Scheduling</h1>
 </div>
 
 <p>
 <p class="btn">
-    <a href="CreateAccount.html">Create Account</a>
+    <a href="CreateAccount/">Create Account</a>
 </p>
 <p class="btn">
-    <a href="CreateCourse.html">Create Course</a>
+    <a href="CreateCourse/">Create Course</a>
 </p>
 
 </body>
