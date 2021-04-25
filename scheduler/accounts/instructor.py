@@ -9,3 +9,4 @@ class Instructor(Account):
 
     def setRole(self, role):
         self.role = role
+
