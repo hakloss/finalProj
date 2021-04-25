@@ -69,6 +69,7 @@ class CreateAccount(View):
 
         account = user(fname=xfname, lname=xlname,email=xemail, password=xpassword,
                        address=xaddress,city=xcity,zip=xzip,pphone=xpphone, wphone=xwphone)
+        print(account.email)
         account.save()
 
         return render(request, "CreateAccount.html",
