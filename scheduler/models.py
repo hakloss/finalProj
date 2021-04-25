@@ -5,18 +5,21 @@ from django.db import models
 
 # Create your models here.
 class user(models.Model):
-    fname = models.CharField(max_length=30)
-    lname = models.CharField(max_length=30)
-    email = models.CharField(max_length=30)
-    password = models.CharField(max_length=30)
+    fname = models.CharField(max_length=30, default='empty')
+    lname = models.CharField(max_length=30, default='empty')
+    email = models.CharField(max_length=30, default='empty')
+    password = models.CharField(max_length=30, default='empty')
     #  0 = admin   |   1 = instructor   |   2 = TA
-    role = models.IntegerField()
-    address = models.CharField(max_length=40)
-    city = models.CharField(max_length=40)
-    state = models.CharField(max_length=2)
-    zip = models.CharField(max_length=5)
-    pphone = models.CharField(max_length=5)
-    wphone = models.CharField(max_length=5)
+    #role = models.IntegerField()
+    address = models.CharField(max_length=40, default='empty')
+    city = models.CharField(max_length=40, default='empty')
+    #state = models.CharField(max_length=2)
+    zip = models.CharField(max_length=5, default='empty')
+    pphone = models.CharField(max_length=5, default='empty')
+    wphone = models.CharField(max_length=5, default='empty')
+
+    def __str__(self):
+        return self.user_text
 
 class course(models.Model):
     name = models.CharField(max_length=30)

@@ -48,30 +48,33 @@ class CreateAccount(View):
         # This is account validation and should become a function
         # return redirect("/login/")
 
-        # return render(request, "CreateAccount.html", {"fname": user.fname, "lname": user.lname, "email":user.email, "password":user.password,
-        #                                               "role":user.role, "address":user.address, "city":user.city, "state":user.state,
-        #                                               "zip":user.zip, "pphone":user.pphone,"wphone":user.wphone})
+        return render(request, "CreateAccount.html", {"fname": user.fname, "lname": user.lname, "email":user.email, "password":user.password,
+                                                      "address":user.address, "city":user.city,
+                                                      "zip":user.zip, "pphone":user.pphone,"wphone":user.wphone})
 
-        return render(request, "CreateAccount.html")
+        #return render(request, "CreateAccount.html")
 
     def post(self, request):
         xfname = request.POST.get('fname')
         xlname = request.POST.get('lname')
         xemail = request.POST.get('email')
         xpassword=request.POST.get('pass')
-        xrole=request.POST.get('role')
+        #xrole=request.POST.get('role')
         xaddress=request.POST.get('address')
         xcity=request.POST.get('city')
-        xstate=request.POST.get('state')
+        #xstate=request.POST.get('state')
         xzip=request.POST.get('zip')
         xpphone=request.POST.get('pphone')
         xwphone=request.POST.get('wphone')
 
-        account = user(fname=xfname, lname=xlname,email=xemail, password=xpassword, role=xrole,
-                       address=xaddress,city=xcity, state=xstate,zip=xzip,pphone=xpphone, wphone=xwphone)
+        account = user(fname=xfname, lname=xlname,email=xemail, password=xpassword,
+                       address=xaddress,city=xcity,zip=xzip,pphone=xpphone, wphone=xwphone)
         account.save()
 
-        return render(request, "CreateAccount.html", {"successmsg": "Account has been created"})
+        return render(request, "CreateAccount.html",
+                      {"fname": user.fname, "lname": user.lname, "email": user.email, "password": user.password,
+                       "address": user.address, "city": user.city,
+                       "zip": user.zip, "pphone": user.pphone, "wphone": user.wphone})
         #return render(request, "CreateAccount.html")
 class CreateCourse(View):
     def get(self, request):
