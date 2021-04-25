@@ -1,3 +1,4 @@
+
 # -*- coding: utf-8 -*-
 import unittest
 from courses import*
@@ -110,3 +111,4 @@ class TestLabGetSchedcle(unittest.TestCase):
     def test_getNumber(self):
         a = section(201, "MWF", "1-2")
         self.assertEqual(a.getSchedule(), "MWF, 1-2")
+
