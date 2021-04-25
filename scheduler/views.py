@@ -6,10 +6,6 @@ from django.shortcuts import render, redirect
 
 from django.views import View
 from scheduler.models import user, course, section, lab
-
-# Create your views here.
-
-
 # Create your views here.
 class Login(View):
     def get(self, request):
