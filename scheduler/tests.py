@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.test import TestCase, Client
-from  .models import accounts ,Administrator, Instructor, TA, Courses
+from .models import user, course, section, lab
 
 # Create your tests here.
 class LoginList(TestCase):
