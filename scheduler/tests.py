@@ -34,7 +34,7 @@ class LoginList(TestCase):
     def test_noExtra(self):
         for i in self.courses.keys():
             resp = self.client.post("/",{"name":i, "password":i}, follow = True)
-            for i self.courses[i]:
+            for j in self.courses[i]:
                 self.assertIn(j,self.courses[i], "There is one extra course, user:" + i)
 
 
