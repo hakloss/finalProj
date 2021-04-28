@@ -1,4 +1,4 @@
-class course():
+class course:
     def __init__(self, name):
         self.sections = []
         self.name = name
@@ -12,7 +12,8 @@ class course():
             out.append(sec.getNumber() + ", " + sec.getSchedule())
         return out
 
-class section():
+
+class section:
     def __init__(self, number, days, time):
         self.labs = []
         self.number = str(number)
@@ -35,7 +36,7 @@ class section():
         return out
 
 
-class lab():
+class lab:
     def __init__(self, number, days, time):
         self.number = str(number)
         self.time = time
